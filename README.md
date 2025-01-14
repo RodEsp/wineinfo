@@ -8,6 +8,8 @@ vector search, and saving bottles to a collection. To make it easy to run
 without being a Kubernetes whiz, it runs in a self-contained [`k3d`][k3d]
 cluster.
 
+## Installing
+
 To run the wineinfo service, you'll need `docker` and `kubectl` installed. This
 README won't cover installing them. Once you've gotten both `docker` and
 `kubectl` set up, install `k3d` by running:
@@ -28,8 +30,18 @@ can start the demo:
 ./deploy/wineinfo.sh
 ```
 
+## Begin the demo
+
 Once you're done, point your browser at <http://localhost:8010>, and you should
 see the working Wineinfo site. Once you click around the site,
 head to [the first part of the demo](demo/01_intro.md).
+
+## Uninstalling
+
+If you're fully done, you can fully delete your k3d cluster with:
+
+```bash
+k3d cluster delete junction-wineinfo
+```
 
 ![A screenshot of the demo UI](./demo/images/homepage.jpg)
